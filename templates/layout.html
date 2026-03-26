@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}My App{% endblock %}</title>
+        {% block styles %}
+            {{ bootstrap.load_css() }}
+        {% endblock %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="{% if active_page == 'index' %}selected{% endif %}"><a href="{{ url_for('index') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>

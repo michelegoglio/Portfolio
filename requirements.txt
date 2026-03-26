@@ -1,0 +1,4 @@
+flask-bootstrap
+Bootstrap-Flask==2.3.3
+Flask>=3.0
+gunicorn
